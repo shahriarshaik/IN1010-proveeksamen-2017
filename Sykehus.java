@@ -14,19 +14,22 @@ public class Sykehus {
         til.settInn(p);
     }
 
+    boolean iFaresonenKvinne(Pasient p){
+        return true;
+    }
+    boolean iFaresonenMann(Pasient p){
+        return true;
+    }
+
     public static void main(String[] args) {
         Sykehus sykehus = new Sykehus();
         Akutten akutt = new Akutten();
         Sengepost seng = new Sengepost(2);
-        Pasient arne = new Pasient("Arne", "idk", 2);
-        Pasient peter = new Pasient("Peter", "idk", 5);
-
+        Pasient arne = new MannligPasient("Arne", "idk", 2);
+        Pasient peter = new MannligPasient("Peter", "idk", 5);
         sykehus.skrivInn(arne, akutt);
-
         sykehus.skrivInn(peter, akutt);
-
         sykehus.overfor(arne,akutt , seng);
-        
-
+        sykehus.skrivUt(peter, akutt);
     }
 }

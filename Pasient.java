@@ -1,4 +1,4 @@
-public class Pasient {
+abstract class Pasient {
     final String fnr;
     final String navn;
     Pasient neste;
@@ -10,5 +10,6 @@ public class Pasient {
         this.fnr = fnr;
         this.prioritet = prio;
     }
+    abstract void iFaresone();
     
 }
